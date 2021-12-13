@@ -5,6 +5,7 @@ import Home from './components/Home';
 import ActivityDisplay from './components/ActivityDisplay';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import {BsSuitHeart} from 'react-icons/bs'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/activities" element={<ActivityDisplay />} />
           <Route path="/" element={<Home/ >} />
         </Routes>
-      <Footer />
+      <Footer heart={<BsSuitHeart />}/>
     </div>
   );
 }
