@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
   background-color: #FEFAE0;
+}
+.app > *{
+  padding: 20px;
 }
 
 .header{
@@ -18,7 +19,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #FEFAE0;
+  background-color:black;
   width: 100%;
 }
 
@@ -26,4 +27,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.footer{
+  display: flex;
+  align-items: row;
+  width: 100%;
+  background-color: chocolate;
 }
