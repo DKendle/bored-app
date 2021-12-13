@@ -4,7 +4,7 @@ import Activity from './Activity'
 
 export default function ActivityDisplay() {
     return (
-        <div>
+        <div className="act-dis">
             <h1>Activities</h1>
             <Activity activities={activityArray}/>
         </div>

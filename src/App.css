@@ -1,4 +1,28 @@
-.App{
+.app{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #606c38;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  background-color: #DDA15E;
+  width: 100%;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FEFAE0;
+  width: 100%;
+}
+
+.act-dis{
   display: flex;
   align-items: center;
   flex-direction: column;
