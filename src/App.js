@@ -5,6 +5,7 @@ import Home from './components/Home';
 import ActivityDisplay from './components/ActivityDisplay';
 import Navbar from './components/Navbar';
 
+
 function App() {
   return (
     <div className="App">
