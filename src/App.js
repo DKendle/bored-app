@@ -5,6 +5,7 @@ import Home from './components/Home';
 import ActivityDisplay from './components/ActivityDisplay';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Form from './components/Form';
 import {BsSuitHeart} from 'react-icons/bs'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
         <Routes>
           <Route path="/activities" element={<ActivityDisplay />} />
+          <Route path='/form' element={<Form />} />
           <Route path="/" element={<Home/ >} />
         </Routes>
       <Footer heart={<BsSuitHeart />}/>

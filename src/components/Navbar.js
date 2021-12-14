@@ -14,8 +14,9 @@ const linkStyles = {
 export default function Navbar() {
     return (
         <div className='navbar'>
-            <NavLink to='/' style={linkStyles}>Home</NavLink>
             <NavLink to='/activities' style={linkStyles}>Activities</NavLink>
+            <NavLink to='/form' style={linkStyles}>Add</NavLink>
+            <NavLink to='/' style={linkStyles}>Home</NavLink>
         </div>
     )
 }
