@@ -1,32 +1,41 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 
 //State will be used to collect changes in the form and
 //update the original state
 export default function Form() {
 
-    const [title, setTitle] = useState('')
+    const [formData, setFormData] = useState({
+        title: ""
+    })
 
+    const configObj ={
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    }
     function handleSubmit(e){
         e.preventDefault()
-        const formData = {
-            title: title
-        }
-        console.log(formData)
+        fetch('http://localhost:3000/activities', 
+        configObj)
         //function to post formData
     }
 
     function handleChange(e){
-        setTitle(e.target.value)
-        console.log(title)
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
     }
 
     return (
         <div>
-            <h1>Add a New Activity</h1>
+            <h3>Add a New Activity</h3>
             <form onSubmit={handleSubmit}id="new-activites">
-                <input onChange={handleChange}type='text' name='Title' value={title}></input>
+                <input onChange={handleChange} type='text' name='title' value={formData.title}></input>
                 <input type='submit' value='Submit' />
 
             </form>
