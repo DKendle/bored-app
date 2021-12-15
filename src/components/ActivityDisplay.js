@@ -1,19 +1,26 @@
 import React from 'react'
-import activityArray from '../data/activities'
+//import activityArray from '../data/activities'
+import { useState, useEffect } from 'react'
 
 export default function ActivityDisplay() {
 
-    //console.log(activityArray)
+    const [aList, setAList] = useState([])
 
-    const list = activityArray.map((a) => {
-        return <li key={a.id}>{a.title}</li>
-    })
+    useEffect(() =>{
+        fetch("http://localhost:3000/activities")
+        .then((r) => r.json())
+        .then((data) => {
+            setAList(data)
+        })
+
+    }, [])
+    console.log(aList)
 
     return (
         <div className="act-list">
             <h3>Activities</h3>
             <ul>
-                {list}
+                {aList.map((a) => <li>{a.title}</li>)}
             </ul>
         </div>
     )
