@@ -1,12 +1,19 @@
 import React from 'react'
 import activityArray from '../data/activities'
-import Activity from './Activity'
 
 export default function ActivityDisplay() {
+
+    console.log(activityArray)
+
+    const list = activityArray.map((a) => {
+        return <li key={a.id} className='list'>{a.title}</li>
+    })
     return (
-        <div className="act-dis">
-            <h1>Activities</h1>
-            <Activity activities={activityArray}/>
+        <div className="act-list">
+            <ul>
+                {list}
+            </ul>
         </div>
     )
 }
+
